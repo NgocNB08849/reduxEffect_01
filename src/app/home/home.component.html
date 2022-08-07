@@ -1,0 +1,27 @@
+<button nbButton status="primary" (click)="loedArticles()"></button>
+<nb-reveal-card *ngFor="let article of aritcles$ | async">
+  <nb-card-front>
+    <nb-card accent="success">
+      <nb-card-header>{{article.title}}</nb-card-header>
+      <nb-card-body>
+        <div style="height:500px; width: 450px; display: inline;">
+          <img src="{{article.social_image}}"style="height:230px">
+          <h2 style="float: right;">Description: {{article.description}}</h2>
+      </div>
+      </nb-card-body>
+    </nb-card>
+  </nb-card-front>
+  <nb-card-back>
+    <nb-card accent="primary">
+      <nb-card-header>Back Card Header</nb-card-header>
+      <nb-card-body>
+        A nebula is an interstellar cloud of dust, hydrogen,
+        helium and other ionized gases.
+        Originally, nebula was a name for
+        any diffuse astronomical object,
+        including galaxies beyond the Milky Way.
+      </nb-card-body>
+    </nb-card>
+
+  </nb-card-back>
+</nb-reveal-card>

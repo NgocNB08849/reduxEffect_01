@@ -1,0 +1,27 @@
+<nb-layout>
+  <nb-layout-header>
+    <img
+      src="../assets/logo-social.png"
+      style="
+        border: 1px solid #ddd;
+        border-radius: 100%;
+        padding: 5px;
+        width: 150px;"/>
+    <span style="flex: 1 auto"></span>
+    <nb-search type="rotate-layout"></nb-search>
+    <button
+      nbButton
+      status="primary"
+      style="float: right; justify-content: space-between">
+      Log Out
+    </button>
+  </nb-layout-header>
+
+  <nb-sidebar>
+    <nb-menu [items]="items"> </nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column class="colored-column-basic">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+</nb-layout>
